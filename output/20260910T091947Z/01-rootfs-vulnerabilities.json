@@ -1,0 +1,1412 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.74.0"
+  },
+  "ReportID": "01a08a9d-c3df-7a9c-a34b-5bd767663be6",
+  "CreatedAt": "2026-09-10T14:49:50.2396955+05:30",
+  "ArtifactName": "C:/Users/yasha/OneDrive/Desktop/Clg/LY/Csfcl/csfcl-ia2-equifax-trivy-forensics/evidence/acis-portal",
+  "ArtifactType": "filesystem",
+  "Results": [
+    {
+      "Target": "Java",
+      "Class": "lang-pkgs",
+      "Type": "jar",
+      "Packages": [
+        {
+          "Name": "org.apache.struts:struts2-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "Version": "2.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "lib/struts2-core-2.5.10.jar",
+          "AnalyzedBy": "jar"
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2017-12611",
+          "VendorIDs": [
+            "GHSA-8fx9-5hx8-crhm"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.3.34, 2.5.11",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-12611",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:a8120a99f212c580bf8b9a64529918ca9c6f0511aef17ba8d8af694c2de8b458",
+          "Title": "struts: RCE attack when using an unintentional expression in Freemarker tag instead of string literals",
+          "Description": "In Apache Struts 2.0.0 through 2.3.33 and 2.5 through 2.5.10.1, using an unintentional expression in a Freemarker tag instead of string literals can lead to a RCE attack.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "http://www.arubanetworks.com/assets/alert/ARUBA-PSA-2017-003.txt",
+            "http://www.oracle.com/technetwork/security-advisory/alert-cve-2017-9805-3889403.html",
+            "http://www.securityfocus.com/bid/100829",
+            "https://access.redhat.com/security/cve/CVE-2017-12611",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/2306f5f7fad7f0157f216f34331238feb0539fa",
+            "https://github.com/apache/struts/commit/637ad1c3707266c33daabb18d7754e795e6681f",
+            "https://kb.netapp.com/support/s/article/ka51A000000CgttQAC/NTAP-20170911-0001",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-12611",
+            "https://struts.apache.org/docs/s2-053.html",
+            "https://web.archive.org/web/20170923161654/http://www.securityfocus.com/bid/100829",
+            "https://www.cve.org/CVERecord?id=CVE-2017-12611"
+          ],
+          "PublishedDate": "2017-09-20T17:29:00.4Z",
+          "LastModifiedDate": "2026-06-17T01:03:37.133Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-5638",
+          "VendorIDs": [
+            "GHSA-j77q-2qqg-6989"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.3.32, 2.5.10.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-5638",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:4a7e1fd990e4c6f9b0574321ff64c0dd072c9faeb3f3b59be6cf785f5a680c21",
+          "Title": "struts2: RCE when performing file upload based on Jakarta Multipart parser",
+          "Description": "The Jakarta Multipart parser in Apache Struts 2 2.3.x before 2.3.32 and 2.5.x before 2.5.10.1 has incorrect exception handling and error-message generation during file-upload attempts, which allows remote attackers to execute arbitrary commands via a crafted Content-Type, Content-Disposition, or Content-Length HTTP header, as exploited in the wild in March 2017 with a Content-Type header containing a #cmd= string.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-755"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 4
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:H",
+              "V3Score": 10
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 10,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "http://blog.talosintelligence.com/2017/03/apache-0-day-exploited.html",
+            "http://blog.trendmicro.com/trendlabs-security-intelligence/cve-2017-5638-apache-struts-vulnerability-remote-code-execution",
+            "http://blog.trendmicro.com/trendlabs-security-intelligence/cve-2017-5638-apache-struts-vulnerability-remote-code-execution/",
+            "http://www.arubanetworks.com/assets/alert/ARUBA-PSA-2017-002.txt",
+            "http://www.eweek.com/security/apache-struts-vulnerability-under-attack.html",
+            "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html",
+            "http://www.securityfocus.com/bid/96729",
+            "http://www.securitytracker.com/id/1037973",
+            "https://access.redhat.com/security/cve/CVE-2017-5638",
+            "https://arstechnica.com/security/2017/03/critical-vulnerability-under-massive-attack-imperils-high-impact-sites",
+            "https://arstechnica.com/security/2017/03/critical-vulnerability-under-massive-attack-imperils-high-impact-sites/",
+            "https://cwiki.apache.org/confluence/display/WW/S2-045",
+            "https://cwiki.apache.org/confluence/display/WW/S2-046",
+            "https://exploit-db.com/exploits/41570",
+            "https://git1-us-west.apache.org/repos/asf?p=struts.git%3Ba=commit%3Bh=352306493971e7d5a756d61780d57a76eb1f519a",
+            "https://git1-us-west.apache.org/repos/asf?p=struts.git%3Ba=commit%3Bh=6b8272ce47160036ed120a48345d9aa884477228",
+            "https://git1-us-west.apache.org/repos/asf?p=struts.git;a=commit;h=352306493971e7d5a756d61780d57a76eb1f519a",
+            "https://git1-us-west.apache.org/repos/asf?p=struts.git;a=commit;h=6b8272ce47160036ed120a48345d9aa884477228",
+            "https://github.com/advisories/GHSA-j77q-2qqg-6989",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/352306493971e7d5a756d61780d57a76eb1f519a",
+            "https://github.com/apache/struts/commit/b06dd50af2a3319dd896bf5c2f4972d2b772cf2b",
+            "https://github.com/mazen160/struts-pwn",
+            "https://github.com/rapid7/metasploit-framework/issues/8064",
+            "https://h20566.www2.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbgn03733en_us",
+            "https://h20566.www2.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbgn03749en_us",
+            "https://h20566.www2.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbhf03723en_us",
+            "https://isc.sans.edu/diary/22169",
+            "https://lists.apache.org/thread.html/r1125f3044a0946d1e7e6f125a6170b58d413ebd4a95157e4608041c7@%3Cannounce.apache.org%3E",
+            "https://lists.apache.org/thread.html/r6d03e45b81eab03580cf7f8bb51cb3e9a1b10a2cc0c6a2d3cc92ed0c@%3Cannounce.apache.org%3E",
+            "https://lists.apache.org/thread.html/r90890afea72a9571d666820b2fe5942a0a5f86be406fa31da3dd0922@%3Cannounce.apache.org%3E",
+            "https://nmap.org/nsedoc/scripts/http-vuln-cve2017-5638.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-5638",
+            "https://packetstormsecurity.com/files/141494/S2-45-poc.py.txt",
+            "https://security.netapp.com/advisory/ntap-20170310-0001",
+            "https://security.netapp.com/advisory/ntap-20170310-0001/",
+            "https://struts.apache.org/docs/s2-045.html",
+            "https://struts.apache.org/docs/s2-046.html",
+            "https://support.lenovo.com/us/en/product_security/len-14200",
+            "https://twitter.com/theog150/status/841146956135124993",
+            "https://web.archive.org/web/20170311203630/http://www.securityfocus.com/bid/96729",
+            "https://web.archive.org/web/20170921030226/http://www.securitytracker.com/id/1037973",
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2017-5638",
+            "https://www.cve.org/CVERecord?id=CVE-2017-5638",
+            "https://www.exploit-db.com/exploits/41614",
+            "https://www.exploit-db.com/exploits/41614/",
+            "https://www.imperva.com/blog/2017/03/cve-2017-5638-new-remote-code-execution-rce-vulnerability-in-apache-struts-2",
+            "https://www.imperva.com/blog/2017/03/cve-2017-5638-new-remote-code-execution-rce-vulnerability-in-apache-struts-2/",
+            "https://www.kb.cert.org/vuls/id/834067",
+            "https://www.symantec.com/security-center/network-protection-security-advisories/SA145"
+          ],
+          "PublishedDate": "2017-03-11T02:59:00.15Z",
+          "LastModifiedDate": "2026-06-17T01:20:54.013Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-0230",
+          "VendorIDs": [
+            "GHSA-wp4h-pvgw-5727"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.22",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-0230",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:9f1165543d556d1b1f9673845e472a3884252fca5631e360f62926b807153cb8",
+          "Title": "struts2: possible RCE due to forced double OGNL evaluation when evaluated on raw user input in tag attributes",
+          "Description": "Apache Struts 2.0.0 to 2.5.20 forced double OGNL evaluation, when evaluated on raw user input in tag attributes, may lead to remote code execution.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "http://packetstormsecurity.com/files/160108/Apache-Struts-2.5.20-Double-OGNL-Evaluation.html",
+            "http://packetstormsecurity.com/files/160721/Apache-Struts-2-Forced-Multi-OGNL-Evaluation.html",
+            "https://access.redhat.com/security/cve/CVE-2019-0230",
+            "https://cwiki.apache.org/confluence/display/ww/s2-059",
+            "https://github.com/apache/struts",
+            "https://launchpad.support.sap.com/#/notes/2982840",
+            "https://lists.apache.org/thread.html/r1125f3044a0946d1e7e6f125a6170b58d413ebd4a95157e4608041c7@%3Cannounce.apache.org%3E",
+            "https://lists.apache.org/thread.html/r90890afea72a9571d666820b2fe5942a0a5f86be406fa31da3dd0922@%3Cannounce.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-0230",
+            "https://www.cve.org/CVERecord?id=CVE-2019-0230",
+            "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "https://www.oracle.com/security-alerts/cpuoct2021.html"
+          ],
+          "PublishedDate": "2020-09-14T17:15:09.933Z",
+          "LastModifiedDate": "2026-06-17T02:08:02.653Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-17530",
+          "VendorIDs": [
+            "GHSA-jc35-q369-45pv"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.26",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-17530",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:68c915ce92181b0952fcb37fa85575a5fcb04e962524958e897a751ea35b41d2",
+          "Title": "struts2: using forced OGNL evaluation on untrusted user input can lead to a RCE and security degradation",
+          "Description": "Forced OGNL evaluation, when evaluated on raw user input in tag attributes, may lead to remote code execution. Affected software : Apache Struts 2.0.0 - Struts 2.5.25.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-917"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "http://jvn.jp/en/jp/JVN43969166/index.html",
+            "http://packetstormsecurity.com/files/160721/Apache-Struts-2-Forced-Multi-OGNL-Evaluation.html",
+            "http://www.openwall.com/lists/oss-security/2022/04/12/6",
+            "https://access.redhat.com/security/cve/CVE-2020-17530",
+            "https://cwiki.apache.org/confluence/display/WW/S2-061",
+            "https://github.com/apache/struts",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-17530",
+            "https://security.netapp.com/advisory/ntap-20210115-0005",
+            "https://security.netapp.com/advisory/ntap-20210115-0005/",
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2020-17530",
+            "https://www.cve.org/CVERecord?id=CVE-2020-17530",
+            "https://www.oracle.com//security-alerts/cpujul2021.html",
+            "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "https://www.oracle.com/security-alerts/cpuoct2021.html"
+          ],
+          "PublishedDate": "2020-12-11T02:15:10.883Z",
+          "LastModifiedDate": "2026-06-17T02:59:05.64Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-31805",
+          "VendorIDs": [
+            "GHSA-v8j6-6c2r-r27c"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.30",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-31805",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:42cfbe4b1c618cca2583061a9a24ea0f20208aafc9cbe52d254537a613e2513d",
+          "Title": "Struts: Forced OGNL evaluation, when evaluated on raw not validated user input in tag attributes, may lead to RCE.",
+          "Description": "The fix issued for CVE-2020-17530 was incomplete. So from Apache Struts 2.0.0 to 2.5.29, still some of the tag’s attributes could perform a double evaluation if a developer applied forced OGNL evaluation by using the %{...} syntax. Using forced OGNL evaluation on untrusted user input can lead to a Remote Code Execution and security degradation.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-917"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.1
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2022/04/12/6",
+            "https://access.redhat.com/security/cve/CVE-2021-31805",
+            "https://cwiki.apache.org/confluence/display/WW/S2-062",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-31805",
+            "https://security.netapp.com/advisory/ntap-20220420-0001",
+            "https://security.netapp.com/advisory/ntap-20220420-0001/",
+            "https://www.cve.org/CVERecord?id=CVE-2021-31805",
+            "https://www.oracle.com/security-alerts/cpujul2022.html"
+          ],
+          "PublishedDate": "2022-04-12T16:15:08.133Z",
+          "LastModifiedDate": "2026-06-17T03:52:15.95Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-50164",
+          "VendorIDs": [
+            "GHSA-2j39-qcjm-428w"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.33, 6.3.0.2",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-50164",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:76f1cbe915a47f7d7a13ec004f154f0e2145d1226bb1ca4465e6ae19d735c3a4",
+          "Title": "Struts: File upload component had a directory traversal vulnerability",
+          "Description": "An attacker can manipulate file upload params to enable paths traversal and under some circumstances this can lead to uploading a malicious file which can be used to perform Remote Code Execution.\nUsers are recommended to upgrade to versions Struts 2.5.33 or Struts 6.3.0.2 or greater to fix this issue.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-552"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 4
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "http://packetstormsecurity.com/files/176157/Struts-S2-066-File-Upload-Remote-Code-Execution.html",
+            "http://www.openwall.com/lists/oss-security/2023/12/07/1",
+            "https://access.redhat.com/security/cve/CVE-2023-50164",
+            "https://cwiki.apache.org/confluence/display/WW/S2-066",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/162e29fee9136f4bfd9b2376da2cbf590f9ea163",
+            "https://github.com/apache/struts/commit/d8c69691ef1d15e76a5f4fcf33039316da2340b6",
+            "https://lists.apache.org/thread/yh09b3fkf6vz5d6jdgrlvmg60lfwtqhj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-50164",
+            "https://security.netapp.com/advisory/ntap-20231214-0010",
+            "https://security.netapp.com/advisory/ntap-20231214-0010/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-50164",
+            "https://www.openwall.com/lists/oss-security/2023/12/07/1"
+          ],
+          "PublishedDate": "2023-12-07T09:15:07.06Z",
+          "LastModifiedDate": "2026-06-17T06:39:13.613Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-53677",
+          "VendorIDs": [
+            "GHSA-43mq-6xmg-29vm"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "6.4.0",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-53677",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:00dcf2f76559c6acd07f1501caf823317c3237119835cbc6bd8de04ace65a79f",
+          "Title": "struts: org.apache.struts: mixing setters for uploaded files and normal fields can allow bypass file upload checks",
+          "Description": "File upload logic in Apache Struts is flawed. An attacker can manipulate file upload params to enable paths traversal and under some circumstances this can lead to uploading a malicious file which can be used to perform Remote Code Execution.\n\nThis issue affects Apache Struts: from 2.0.0 before 6.4.0.\n\nUsers are recommended to upgrade to version 6.4.0 at least and migrate to the new  file upload mechanism https://struts.apache.org/core-developers/file-upload . If you are not using an old file upload logic based on FileuploadInterceptor your application is safe.\n\nYou can find more details in  https://cwiki.apache.org/confluence/display/WW/S2-067",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-434"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 4
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V40Vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/S:N/AU:Y/R:A/V:C/RE:L/U:Red",
+              "V3Score": 9.8,
+              "V40Score": 9.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "V3Score": 9
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-53677",
+            "https://cwiki.apache.org/confluence/display/WW/S2-067",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/1ecfbae46543a83e131404f8dcc84b3d0d554854",
+            "https://github.com/apache/struts/commit/3ef9ade8902a63bb560892453eeca02bfddefc78",
+            "https://github.com/apache/struts/commit/930fef7679d7247db9e460c146b1698a9d7ad1e4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-53677",
+            "https://security.netapp.com/advisory/ntap-20250103-0005",
+            "https://security.netapp.com/advisory/ntap-20250103-0005/",
+            "https://struts.apache.org/core-developers/file-upload",
+            "https://www.cve.org/CVERecord?id=CVE-2024-53677",
+            "https://www.dynatrace.com/news/blog/the-anatomy-of-broken-apache-struts-2-a-technical-deep-dive-into-cve-2024-53677"
+          ],
+          "PublishedDate": "2024-12-11T16:15:14.593Z",
+          "LastModifiedDate": "2026-06-17T08:09:05.01Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2012-1592",
+          "VendorIDs": [
+            "GHSA-8m5q-crqq-6pmf"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.22",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2012-1592",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:e0d8ab063ef14b14cb987d5fb31128123386db52dddf995f593233eb64dca2a7",
+          "Title": "Unrestricted Upload of File with Dangerous Type in Apache Struts2",
+          "Description": "A local code execution issue exists in Apache Struts2 when processing malformed XSLT files, which could let a malicious user upload and execute arbitrary files.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-434"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 8.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 6.5,
+              "V3Score": 8.8
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2012/03/28/12",
+            "https://access.redhat.com/security/cve/cve-2012-1592",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2012-1592",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/blob/master/core/src/main/resources/struts-default.xml#L39-L76",
+            "https://issues.apache.org/jira/browse/WW-5055",
+            "https://lists.apache.org/thread.html/r348ed455a140273c40b974f0615dee692f7c9b26c6de2118b4280ef2@%3Cissues.struts.apache.org%3E",
+            "https://lists.apache.org/thread.html/r593ebb2f4c95b064e6901fd273eff256c493db952bdb484395948ffc@%3Cissues.struts.apache.org%3E",
+            "https://lists.apache.org/thread.html/r93c4e3f6cb138cd117c739714f07e47af547183ba099ba46be2b2a5b@%3Cissues.struts.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2012-1592",
+            "https://seclists.org/bugtraq/2012/Mar/110",
+            "https://security-tracker.debian.org/tracker/CVE-2012-1592",
+            "https://struts.apache.org/security/#internal-security-mechanism",
+            "https://www.openwall.com/lists/oss-security/2012/03/28/12"
+          ],
+          "PublishedDate": "2019-12-05T21:15:11.427Z",
+          "LastModifiedDate": "2024-11-21T01:37:16.203Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-9787",
+          "VendorIDs": [
+            "GHSA-8mr5-h28g-36qx"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.3.33, 2.5.12",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-9787",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:66b42615ae91b153b55d4d4419a79da74815b438a200c30fb9cb9ea9d674bf16",
+          "Title": "struts: Denial of service when using a Spring AOP functionality",
+          "Description": "When using a Spring AOP functionality to secure Struts actions it is possible to perform a DoS attack. Solution is to upgrade to Apache Struts version 2.5.12 or 2.3.33.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "http://struts.apache.org/docs/s2-049.html",
+            "http://www.oracle.com/technetwork/security-advisory/alert-cve-2017-9805-3889403.html",
+            "http://www.securityfocus.com/bid/99562",
+            "http://www.securitytracker.com/id/1039115",
+            "https://access.redhat.com/security/cve/CVE-2017-9787",
+            "https://github.com/apache/struts/commit/086b63735527d4bb0c1dd0d86a7c0374b825ff2",
+            "https://github.com/apache/struts/commit/0d6442bab5b44d93c4c2e63c5335f0a331333b9",
+            "https://lists.apache.org/thread.html/3795c4dd46d9ec75f4a6eb9eca11c11edd3e796c6c1fd7b17b5dc50d@%3Cannouncements.struts.apache.org%3E",
+            "https://lists.apache.org/thread.html/de3d325f0433cd3b42258b6a302c0d7a72b69eedc1480ed561d3b065@%3Cannouncements.struts.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-9787",
+            "https://security.netapp.com/advisory/ntap-20180706-0002",
+            "https://security.netapp.com/advisory/ntap-20180706-0002/",
+            "https://web.archive.org/web/20170910013819/http://www.securitytracker.com/id/1039115",
+            "https://web.archive.org/web/20200227144723/http://www.securityfocus.com/bid/99562",
+            "https://www.cve.org/CVERecord?id=CVE-2017-9787"
+          ],
+          "PublishedDate": "2017-07-13T15:29:00.393Z",
+          "LastModifiedDate": "2026-06-17T01:28:54.133Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-9804",
+          "VendorIDs": [
+            "GHSA-x5x7-3v85-wpc4"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.3.34, 2.5.13",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-9804",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:601f39a06c5a8b88283dfaed576087b9d9035ffb95a0858a16abc7ec92ffe53c",
+          "Title": "struts: A regular expression Denial of Service when using URLValidator",
+          "Description": "In Apache Struts 2.3.7 through 2.3.33 and 2.5 through 2.5.12, if an application allows entering a URL in a form field and built-in URLValidator is used, it is possible to prepare a special URL which will be used to overload server process when performing validation of the URL.  NOTE: this vulnerability exists because of an incomplete fix for S2-047 / CVE-2017-7672.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.7
+            }
+          },
+          "References": [
+            "http://www.arubanetworks.com/assets/alert/ARUBA-PSA-2017-003.txt",
+            "http://www.oracle.com/technetwork/security-advisory/alert-cve-2017-9805-3889403.html",
+            "http://www.securityfocus.com/bid/100612",
+            "http://www.securitytracker.com/id/1039261",
+            "https://access.redhat.com/security/cve/CVE-2017-9804",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/418a20c0594f23764fe29ced400c1219239899a",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-9804",
+            "https://security.netapp.com/advisory/ntap-20180629-0001",
+            "https://security.netapp.com/advisory/ntap-20180629-0001/",
+            "https://struts.apache.org/docs/s2-050.html",
+            "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170907-struts2",
+            "https://web.archive.org/web/20171113165852/http://www.securityfocus.com/bid/100612",
+            "https://web.archive.org/web/20201021075553/http://www.securitytracker.com/id/1039261",
+            "https://www.cve.org/CVERecord?id=CVE-2017-9804"
+          ],
+          "PublishedDate": "2017-09-20T17:29:00.62Z",
+          "LastModifiedDate": "2026-06-17T01:28:57.343Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2018-11776",
+          "VendorIDs": [
+            "GHSA-cr6j-3jp9-rw65"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.3.35, 2.5.17",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2018-11776",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:9e10d73a13aa6ef6293a7d1ce839dcf7d328b33d254c92757f14ed518c77cfc6",
+          "Title": "struts2: Using specific results and namespaces can result in a remote code execution",
+          "Description": "Apache Struts versions 2.3 to 2.3.34 and 2.5 to 2.5.16 suffer from possible Remote Code Execution when alwaysSelectFullNamespace is true (either by user or a plugin like Convention Plugin) and then: results are used with no namespace and in same time, its upper package have no or wildcard namespace and similar to results, same possibility when using url tag which doesn't have value and action set and in same time, its upper package have no or wildcard namespace.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 4
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:H",
+              "V3Score": 8.1
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 9.3,
+              "V3Score": 8.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            }
+          },
+          "References": [
+            "http://packetstormsecurity.com/files/172830/Apache-Struts-Remote-Code-Execution.html",
+            "http://www.arubanetworks.com/assets/alert/ARUBA-PSA-2018-005.txt",
+            "http://www.oracle.com/technetwork/security-advisory/alert-cve-2018-11776-5072787.html",
+            "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html",
+            "http://www.securityfocus.com/bid/105125",
+            "http://www.securitytracker.com/id/1041547",
+            "http://www.securitytracker.com/id/1041888",
+            "https://access.redhat.com/security/cve/CVE-2018-11776",
+            "https://cwiki.apache.org/confluence/display/WW/S2-057",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/6e87474f9ad0549f07dd2c37d50a9ccd0977c6e",
+            "https://github.com/hook-s3c/CVE-2018-11776-Python-PoC",
+            "https://lgtm.com/blog/apache_struts_CVE-2018-11776",
+            "https://lists.apache.org/thread.html/r6d03e45b81eab03580cf7f8bb51cb3e9a1b10a2cc0c6a2d3cc92ed0c@%3Cannounce.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2018-11776",
+            "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2018-0012",
+            "https://security.netapp.com/advisory/ntap-20180822-0001",
+            "https://security.netapp.com/advisory/ntap-20180822-0001/",
+            "https://security.netapp.com/advisory/ntap-20181018-0002",
+            "https://security.netapp.com/advisory/ntap-20181018-0002/",
+            "https://web.archive.org/web/20180822160726/http://www.securityfocus.com/bid/105125",
+            "https://web.archive.org/web/20200807025819/http://www.securitytracker.com/id/1041888",
+            "https://web.archive.org/web/20201208145803/https://securitytracker.com/id/1041547",
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+            "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2018-11776",
+            "https://www.cve.org/CVERecord?id=CVE-2018-11776",
+            "https://www.exploit-db.com/exploits/45260",
+            "https://www.exploit-db.com/exploits/45260/",
+            "https://www.exploit-db.com/exploits/45262",
+            "https://www.exploit-db.com/exploits/45262/",
+            "https://www.exploit-db.com/exploits/45367",
+            "https://www.exploit-db.com/exploits/45367/",
+            "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "https://www.oracle.com/technetwork/security-advisory/cpujan2019-5072801.html"
+          ],
+          "PublishedDate": "2018-08-22T13:29:00.753Z",
+          "LastModifiedDate": "2026-06-17T01:36:34.35Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-0233",
+          "VendorIDs": [
+            "GHSA-ccp5-gg58-pxfm"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.22",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-0233",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:c6d720cf8c9aadd2bb3e553849ed1176a621ad292f927d107c9fcd75d565cda9",
+          "Title": "struts2: access permission override when performing a file upload leads to DoS",
+          "Description": "An access permission override in Apache Struts 2.0.0 to 2.5.20 may cause a Denial of Service when performing a file upload.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-281"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2019-0233",
+            "https://cwiki.apache.org/confluence/display/ww/s2-060",
+            "https://launchpad.support.sap.com/#/notes/2982840",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-0233",
+            "https://www.cve.org/CVERecord?id=CVE-2019-0233",
+            "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "https://www.oracle.com/security-alerts/cpuoct2021.html"
+          ],
+          "PublishedDate": "2020-09-14T17:15:09.98Z",
+          "LastModifiedDate": "2026-06-17T02:08:03.257Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-34396",
+          "VendorIDs": [
+            "GHSA-4g42-gqrg-4633"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.31, 6.1.2.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-34396",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:bdbb7353f5a88e42d82ac07bbb048742fb0522e9ed6c0ec153f1bf69b1056a1b",
+          "Title": "Apache Struts vulnerable to memory exhaustion",
+          "Description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Software Foundation Apache Struts.This issue affects Apache Struts: through 2.5.30, through 6.1.2.\n\nUpgrade to Struts 2.5.31 or 6.1.2.1 or greater",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2023/06/14/3",
+            "https://cwiki.apache.org/confluence/display/WW/S2-064",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/2d6f1bc0a6f5ac575a56784ac6461816b67c4f21",
+            "https://github.com/apache/struts/releases/tag/STRUTS_2_5_31",
+            "https://github.com/apache/struts/releases/tag/STRUTS_6_1_2_1",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-34396",
+            "https://security.netapp.com/advisory/ntap-20230706-0005",
+            "https://security.netapp.com/advisory/ntap-20230706-0005/"
+          ],
+          "PublishedDate": "2023-06-14T08:15:09.52Z",
+          "LastModifiedDate": "2026-06-17T06:03:33.02Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-41835",
+          "VendorIDs": [
+            "GHSA-729q-fcgp-r5xh"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "6.3.0.1, 6.1.2.2, 2.5.32",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-41835",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:849a11fe550a7edbf5f5021cc1b89e5fa6d8bdbb983226cc4803c28b713ac692",
+          "Title": "struts: Excessive disk usage during file upload",
+          "Description": "When a Multipart request is performed but some of the fields exceed the maxStringLength  limit, the upload files will remain in struts.multipart.saveDir  even if the request has been denied.\nUsers are recommended to upgrade to versions Struts 2.5.32 or 6.1.2.2 or Struts 6.3.0.1 or greater, which fixe this issue.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-459"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2023/12/09/1",
+            "https://access.redhat.com/security/cve/CVE-2023-41835",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/3292152f8c0a77ee4827beede82b6580478a2c2a",
+            "https://github.com/apache/struts/commit/4c044f12560e22e00520595412830f9582d6dac7",
+            "https://github.com/apache/struts/commit/bf54436869c264941dd192c752a4abfaa65d3711",
+            "https://lists.apache.org/thread/6wj530kh3ono8phr642y9sqkl67ys2ft",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-41835",
+            "https://security.netapp.com/advisory/ntap-20231013-0001",
+            "https://security.netapp.com/advisory/ntap-20231013-0001/",
+            "https://www.cve.org/CVERecord?id=CVE-2023-41835",
+            "https://www.openwall.com/lists/oss-security/2023/12/09/1"
+          ],
+          "PublishedDate": "2023-12-05T09:15:07.093Z",
+          "LastModifiedDate": "2026-06-17T06:22:54.2Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-64775",
+          "VendorIDs": [
+            "GHSA-xx7v-hqxh-cjr9"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "6.8.0, 7.1.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-64775",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:c7677645395f28b6f0398bb53533085f5af0731deaa784c18b0dd0e295ca6b30",
+          "Title": "org.apache.struts/struts2-core: Apache Struts: File leak in multipart request processing causes disk exhaustion (DoS)",
+          "Description": "Denial of Service vulnerability in Apache Struts, file leak in multipart request processing causes disk exhaustion.\n\nThis issue affects Apache Struts: from 2.0.0 through 6.7.0, from 7.0.0 through 7.0.3.\n\nUsers are recommended to upgrade to version 6.8.0 or 7.1.1, which fixes the issue.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-459"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2025/12/01/2",
+            "https://access.redhat.com/security/cve/CVE-2025-64775",
+            "https://cwiki.apache.org/confluence/display/WW/S2-068",
+            "https://github.com/apache/struts",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-64775",
+            "https://www.cve.org/CVERecord?id=CVE-2025-64775",
+            "https://www.openwall.com/lists/oss-security/2025/12/01/2"
+          ],
+          "PublishedDate": "2025-12-01T16:15:56.873Z",
+          "LastModifiedDate": "2026-06-17T09:55:11.247Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-66675",
+          "VendorIDs": [
+            "GHSA-rg58-xhh7-mqjw"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "6.8.0, 7.1.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-66675",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:c9963b02e8726fc24568e7e8f432f9ddd9b76a516bc1e273de7bdd71b29aa54a",
+          "Title": "Apache Struts has a Denial of Service vulnerability",
+          "Description": "Denial of Service vulnerability in Apache Struts, file leak in multipart request processing causes disk exhaustion.\n\nThis issue affects Apache Struts: from 2.0.0 through 6.7.4, from 7.0.0 through 7.0.3.\n\nUsers are recommended to upgrade to version 6.8.0 or 7.1.1, which fixes the issue.\n\nIt's related to  https://cve.org/CVERecord?id=CVE-2025-64775  - this CVE addresses missing affected version 6.7.4",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-459"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+              "V3Score": 8.2
+            }
+          },
+          "References": [
+            "https://cve.org/CVERecord?id=CVE-2025-64775",
+            "https://cwiki.apache.org/confluence/display/WW/S2-068",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/831568929cfba700f790f6ebe6e335f9f33fb468",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-66675"
+          ],
+          "PublishedDate": "2025-12-10T10:16:02.17Z",
+          "LastModifiedDate": "2026-06-17T09:57:09.367Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2025-68493",
+          "VendorIDs": [
+            "GHSA-qcfc-hmrc-59x7"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "6.1.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2025-68493",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:44267d94b93f48f20ece46426beb01d66dea16c5e8306f0ea8ab63373a48cea4",
+          "Title": "org.apache.struts: Apache Struts: Information disclosure and denial of service via missing XML validation",
+          "Description": "Missing XML Validation vulnerability in Apache Struts, Apache Struts.\n\nThis issue affects Apache Struts: from 2.0.0 before 2.2.1; Apache Struts: from 2.2.1 through 6.1.0.\n\nUsers are recommended to upgrade to version 6.1.1, which fixes the issue.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-611",
+            "CWE-112"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "V3Score": 8.1
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "V3Score": 8.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:L",
+              "V3Score": 7.1
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2026/01/11/2",
+            "https://access.redhat.com/security/cve/CVE-2025-68493",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2428559",
+            "https://cwiki.apache.org/confluence/display/WW/S2-069",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/pull/628",
+            "https://issues.apache.org/jira/browse/WW-5252",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-68493",
+            "https://security.access.redhat.com/data/csaf/v2/vex/2025/cve-2025-68493.json",
+            "https://www.cve.org/CVERecord?id=CVE-2025-68493"
+          ],
+          "PublishedDate": "2026-01-11T13:15:45.61Z",
+          "LastModifiedDate": "2026-07-15T02:17:50.19Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-4465",
+          "VendorIDs": [
+            "GHSA-xg75-68x3-7p3q"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.3.29, 2.5.13",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-4465",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:7113a6cc870592e87ce7a260af6d6e8fa3db6ee857fa6d3d3fca0b242640db88",
+          "Title": "struts: Possible DoS attack when using URLValidator",
+          "Description": "The URLValidator class in Apache Struts 2 2.3.20 through 2.3.28.1 and 2.5.x before 2.5.1 allows remote attackers to cause a denial of service via a null value for a URL field.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V2Score": 5,
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V2Score": 4.3
+            }
+          },
+          "References": [
+            "http://jvn.jp/en/jp/JVN12352818/index.html",
+            "http://jvndb.jvn.jp/jvndb/JVNDB-2016-000114",
+            "http://www-01.ibm.com/support/docview.wss?uid=swg21987854",
+            "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html",
+            "http://www.securityfocus.com/bid/91278",
+            "https://access.redhat.com/security/cve/CVE-2016-4465",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1348253",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/a0fdca138feec2c2e94eb75ca1f8b76678b4d152",
+            "https://github.com/apache/struts/commit/eccc31ebce5430f9e91b9684c63eaaf885e603f9",
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-4465",
+            "https://struts.apache.org/docs/s2-041.html",
+            "https://www.cve.org/CVERecord?id=CVE-2016-4465"
+          ],
+          "PublishedDate": "2016-07-04T22:59:10.117Z",
+          "LastModifiedDate": "2026-06-17T00:47:36.567Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-8738",
+          "VendorIDs": [
+            "GHSA-86vq-8qhc-5rqw"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.13",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-8738",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:c45811bf0110953958eabb284b8709623073b620cd7341ee1b7ca2fa9b74a9a0",
+          "Title": "In Apache Struts 2.5 through 2.5.5, if an application allows entering  ...",
+          "Description": "In Apache Struts 2.5 through 2.5.5, if an application allows entering a URL in a form field and the built-in URLValidator is used, it is possible to prepare a special URL which will be used to overload server process when performing validation of the URL.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 5.9
+            }
+          },
+          "References": [
+            "http://www.securityfocus.com/bid/94657",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/554b9dddb0fbd1e581ef577dd62a7c22955ad0f6",
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-8738",
+            "https://security.netapp.com/advisory/ntap-20180629-0003",
+            "https://security.netapp.com/advisory/ntap-20180629-0003/",
+            "https://struts.apache.org/docs/s2-044.html"
+          ],
+          "PublishedDate": "2017-09-20T17:29:00.337Z",
+          "LastModifiedDate": "2026-06-17T00:54:55.01Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-7672",
+          "VendorIDs": [
+            "GHSA-9gp7-jvm2-r4mx"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.12",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-7672",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:b231b952ea525af4f70c3896966baa9c6268956c3d42fe91c45317aaf564a419",
+          "Title": "struts: Denial of service in built-in URLValidator",
+          "Description": "If an application allows enter an URL in a form field and built-in URLValidator is used, it is possible to prepare a special URL which will be used to overload server process when performing validation of the URL. Solution is to upgrade to Apache Struts version 2.5.12.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.9
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 4.3,
+              "V3Score": 5.9
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "http://struts.apache.org/docs/s2-047.html",
+            "http://www.oracle.com/technetwork/security-advisory/alert-cve-2017-9805-3889403.html",
+            "http://www.securityfocus.com/bid/99563",
+            "http://www.securitytracker.com/id/1039114",
+            "https://access.redhat.com/security/cve/CVE-2017-7672",
+            "https://github.com/apache/struts",
+            "https://lists.apache.org/thread.html/3795c4dd46d9ec75f4a6eb9eca11c11edd3e796c6c1fd7b17b5dc50d@%3Cannouncements.struts.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-7672",
+            "https://security.netapp.com/advisory/ntap-20180706-0002",
+            "https://security.netapp.com/advisory/ntap-20180706-0002/",
+            "https://web.archive.org/web/20170907215142/http://www.securitytracker.com/id/1039114",
+            "https://web.archive.org/web/20200227144724/http://www.securityfocus.com/bid/99563",
+            "https://www.cve.org/CVERecord?id=CVE-2017-7672"
+          ],
+          "PublishedDate": "2017-07-13T15:29:00.363Z",
+          "LastModifiedDate": "2026-06-17T01:24:56.84Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-34149",
+          "VendorIDs": [
+            "GHSA-8f6x-v685-g2xc"
+          ],
+          "PkgName": "org.apache.struts:struts2-core",
+          "PkgPath": "lib/struts2-core-2.5.10.jar",
+          "PkgIdentifier": {
+            "PURL": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+            "UID": "65df9745adb879d6"
+          },
+          "InstalledVersion": "2.5.10",
+          "FixedVersion": "2.5.31, 6.1.2.1",
+          "Status": "fixed",
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-34149",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory Maven",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Amaven"
+          },
+          "Fingerprint": "sha256:eac71a72f1a101174d2383a2f06c32baa4409a3217a111197f20d77a5845e14f",
+          "Title": "Apache Struts vulnerable to memory exhaustion",
+          "Description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Software Foundation Apache Struts.This issue affects Apache Struts: through 2.5.30, through 6.1.2.\n\nUpgrade to Struts 2.5.31 or 6.1.2.1 or greater.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-770"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "nvd": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 6.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 6.5
+            }
+          },
+          "References": [
+            "http://www.openwall.com/lists/oss-security/2023/06/14/2",
+            "https://cwiki.apache.org/confluence/display/WW/S2-063",
+            "https://github.com/apache/struts",
+            "https://github.com/apache/struts/commit/2d6f1bc0a6f5ac575a56784ac6461816b67c4f21",
+            "https://github.com/apache/struts/releases/tag/STRUTS_2_5_31",
+            "https://github.com/apache/struts/releases/tag/STRUTS_6_1_2_1",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-34149",
+            "https://security.netapp.com/advisory/ntap-20230706-0005",
+            "https://security.netapp.com/advisory/ntap-20230706-0005/"
+          ],
+          "PublishedDate": "2023-06-14T08:15:09.45Z",
+          "LastModifiedDate": "2026-06-17T06:03:00.197Z"
+        }
+      ]
+    }
+  ]
+}

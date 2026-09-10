@@ -1,0 +1,16 @@
+# Evidence must be preserved byte-for-byte. Git's automatic line-ending
+# conversion would change file contents and therefore change their SHA-256
+# hashes, breaking the integrity verification on other machines.
+evidence/** -text
+output/**   -text
+
+# Scripts must keep Unix line endings or they fail to run on macOS and Linux
+# with "bad interpreter: /usr/bin/env bash^M".
+*.sh  text eol=lf
+*.py  text eol=lf
+*.yaml text eol=lf
+
+# Binary artefacts
+*.jar binary
+*.png binary
+*.pdf binary

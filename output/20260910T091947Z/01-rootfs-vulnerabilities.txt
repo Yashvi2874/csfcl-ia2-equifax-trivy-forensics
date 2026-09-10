@@ -1,0 +1,98 @@
+
+Report Summary
+
+┌─────────────────────────────┬──────┬─────────────────┐
+│           Target            │ Type │ Vulnerabilities │
+├─────────────────────────────┼──────┼─────────────────┤
+│ lib/struts2-core-2.5.10.jar │ jar  │       21        │
+└─────────────────────────────┴──────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+Java (jar)
+==========
+Total: 21 (UNKNOWN: 0, LOW: 0, MEDIUM: 4, HIGH: 10, CRITICAL: 7)
+
+┌──────────────────────────────────────────────────────────┬────────────────┬──────────┬────────┬───────────────────┬──────────────────────────┬──────────────────────────────────────────────────────────────┐
+│                         Library                          │ Vulnerability  │ Severity │ Status │ Installed Version │      Fixed Version       │                            Title                             │
+├──────────────────────────────────────────────────────────┼────────────────┼──────────┼────────┼───────────────────┼──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ org.apache.struts:struts2-core (struts2-core-2.5.10.jar) │ CVE-2017-12611 │ CRITICAL │ fixed  │ 2.5.10            │ 2.3.34, 2.5.11           │ struts: RCE attack when using an unintentional expression in │
+│                                                          │                │          │        │                   │                          │ Freemarker tag instead...                                    │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2017-12611                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2017-5638  │          │        │                   │ 2.3.32, 2.5.10.1         │ struts2: RCE when performing file upload based on Jakarta    │
+│                                                          │                │          │        │                   │                          │ Multipart parser                                             │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2017-5638                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2019-0230  │          │        │                   │ 2.5.22                   │ struts2: possible RCE due to forced double OGNL evaluation   │
+│                                                          │                │          │        │                   │                          │ when evaluated on...                                         │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2019-0230                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2020-17530 │          │        │                   │ 2.5.26                   │ struts2: using forced OGNL evaluation on untrusted user      │
+│                                                          │                │          │        │                   │                          │ input can lead to...                                         │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2020-17530                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2021-31805 │          │        │                   │ 2.5.30                   │ Struts: Forced OGNL evaluation, when evaluated on raw not    │
+│                                                          │                │          │        │                   │                          │ validated user input...                                      │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2021-31805                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2023-50164 │          │        │                   │ 2.5.33, 6.3.0.2          │ Struts: File upload component had a directory traversal      │
+│                                                          │                │          │        │                   │                          │ vulnerability                                                │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2023-50164                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2024-53677 │          │        │                   │ 6.4.0                    │ struts: org.apache.struts: mixing setters for uploaded files │
+│                                                          │                │          │        │                   │                          │ and normal fields can allow...                               │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2024-53677                   │
+│                                                          ├────────────────┼──────────┤        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2012-1592  │ HIGH     │        │                   │ 2.5.22                   │ Unrestricted Upload of File with Dangerous Type in Apache    │
+│                                                          │                │          │        │                   │                          │ Struts2                                                      │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2012-1592                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2017-9787  │          │        │                   │ 2.3.33, 2.5.12           │ struts: Denial of service when using a Spring AOP            │
+│                                                          │                │          │        │                   │                          │ functionality                                                │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2017-9787                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2017-9804  │          │        │                   │ 2.3.34, 2.5.13           │ struts: A regular expression Denial of Service when using    │
+│                                                          │                │          │        │                   │                          │ URLValidator                                                 │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2017-9804                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2018-11776 │          │        │                   │ 2.3.35, 2.5.17           │ struts2: Using specific results and namespaces can result in │
+│                                                          │                │          │        │                   │                          │ a remote code...                                             │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2018-11776                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2019-0233  │          │        │                   │ 2.5.22                   │ struts2: access permission override when performing a file   │
+│                                                          │                │          │        │                   │                          │ upload leads to DoS...                                       │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2019-0233                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2023-34396 │          │        │                   │ 2.5.31, 6.1.2.1          │ Apache Struts vulnerable to memory exhaustion                │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2023-34396                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2023-41835 │          │        │                   │ 6.3.0.1, 6.1.2.2, 2.5.32 │ struts: Excessive disk usage during file upload              │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2023-41835                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2025-64775 │          │        │                   │ 6.8.0, 7.1.1             │ org.apache.struts/struts2-core: Apache Struts: File leak in  │
+│                                                          │                │          │        │                   │                          │ multipart request processing causes disk exhaustion...       │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-64775                   │
+│                                                          ├────────────────┤          │        │                   │                          ├──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2025-66675 │          │        │                   │                          │ Apache Struts has a Denial of Service vulnerability          │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-66675                   │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2025-68493 │          │        │                   │ 6.1.1                    │ org.apache.struts: Apache Struts: Information disclosure and │
+│                                                          │                │          │        │                   │                          │ denial of service via missing XML...                         │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2025-68493                   │
+│                                                          ├────────────────┼──────────┤        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2016-4465  │ MEDIUM   │        │                   │ 2.3.29, 2.5.13           │ struts: Possible DoS attack when using URLValidator          │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2016-4465                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2016-8738  │          │        │                   │ 2.5.13                   │ In Apache Struts 2.5 through 2.5.5, if an application allows │
+│                                                          │                │          │        │                   │                          │ entering ...                                                 │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2016-8738                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2017-7672  │          │        │                   │ 2.5.12                   │ struts: Denial of service in built-in URLValidator           │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2017-7672                    │
+│                                                          ├────────────────┤          │        │                   ├──────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                                          │ CVE-2023-34149 │          │        │                   │ 2.5.31, 6.1.2.1          │ Apache Struts vulnerable to memory exhaustion                │
+│                                                          │                │          │        │                   │                          │ https://avd.aquasec.com/nvd/cve-2023-34149                   │
+└──────────────────────────────────────────────────────────┴────────────────┴──────────┴────────┴───────────────────┴──────────────────────────┴──────────────────────────────────────────────────────────────┘

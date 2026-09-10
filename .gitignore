@@ -1,0 +1,20 @@
+# Trivy local cache (large, machine-specific - never commit)
+.trivycache/
+trivy-cache/
+
+# OS noise
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Downloaded binaries
+bin/
+*.exe
+
+# Keep evidence output - it IS the deliverable
+!output/
+!output/**

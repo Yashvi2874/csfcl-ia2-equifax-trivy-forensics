@@ -1,0 +1,80 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:b5dc9789-a661-4f94-a88d-4f98038b622a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-10T09:20:01+00:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "manufacturer": {
+            "name": "Aqua Security Software Ltd."
+          },
+          "group": "aquasecurity",
+          "name": "trivy",
+          "version": "0.74.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "809fe8a1-a4bb-4584-abe2-1c839c332505",
+      "type": "application",
+      "name": "C:/Users/yasha/OneDrive/Desktop/Clg/LY/Csfcl/csfcl-ia2-equifax-trivy-forensics/evidence/acis-portal",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:SchemaVersion",
+          "value": "2"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+      "type": "library",
+      "group": "org.apache.struts",
+      "name": "struts2-core",
+      "version": "2.5.10",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "070e02e901924a40097b847cff4066c15d3a684b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:FilePath",
+          "value": "lib/struts2-core-2.5.10.jar"
+        },
+        {
+          "name": "aquasecurity:trivy:PkgType",
+          "value": "jar"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "809fe8a1-a4bb-4584-abe2-1c839c332505",
+      "dependsOn": [
+        "pkg:maven/org.apache.struts/struts2-core@2.5.10"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.apache.struts/struts2-core@2.5.10",
+      "dependsOn": []
+    }
+  ],
+  "vulnerabilities": []
+}

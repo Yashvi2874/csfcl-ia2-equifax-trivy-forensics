@@ -1,0 +1,12 @@
+# Evidence integrity baseline
+# Case: CSFCL-IA2-2026-005
+# Generated (UTC): 20260910T091947Z
+# Algorithm: SHA-256
+
+187488120a5b2f1ec53a6406ad9c5109cfde74e0df606d51cd98b7279af50d77  evidence/acis-portal/Dockerfile
+286edecd5b361431fb3312be0aba9dfa71aab0fbf07ac93589717d47be91dce0  evidence/acis-portal/config/.env
+b59a33dccce23d8c2a2347e03b17753064239232ee5e2df6fd8eacc89d1c90ce  evidence/acis-portal/config/acis-backup.pem
+ac80b7424ec90237014e5177843ebd7d4db52768a5aa35b8ddb048b6678a2617  evidence/acis-portal/config/aws-credentials
+d1f5a1320a15b8389f9e316545e5b8c92cb2c74168881ba2c27580a83b5b7062  evidence/acis-portal/config/database.properties
+7389713131d3f85aff34f09d8ef15d14e12a1d940b987aed72f148c1f6c36af2  evidence/acis-portal/lib/struts2-core-2.5.10.jar
+1fa533b14d30ad81fc653530221e5c381ae2f6143aa60513db155150e6ae0d1d  evidence/acis-portal/pom.xml
