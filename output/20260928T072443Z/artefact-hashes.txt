@@ -1,0 +1,15 @@
+# Artefacts produced by this examination
+# Case: CSFCL-IA2-2026-005   Generated (UTC): 20260928T072443Z
+# Algorithm: SHA-256
+
+3199c7f3ed91d6aa4426c7b650f47415ba43e21260f111942b85ae015ac80712  01-rootfs-vulnerabilities.json
+ca01fdbcf9259c7285fb2ca7074f7554b17f0b2c21dcb0391a51a769e145025f  01-rootfs-vulnerabilities.txt
+ab5704eb8169119dee0095e512ceb0254a183b23bf8f46946c678320d47e7aac  02-manifest-vulnerabilities.json
+0eb9877094471bb10da6b20fb44b945901c7fbb422d2e5498a516e975b2520a1  02-manifest-vulnerabilities.txt
+16bf0f846e1bd338409e7202daddadf35c388b43e90354661200e2c07f142d56  03-secrets.json
+30702d2fb8bea630784f001e37f3c01c8be50798e64c9bcfa35d24de17305412  03-secrets.txt
+9025b1b910df9508c6a5779b07ff7180f44bd40ac3f3351091f0b5bd9ea7e6ca  04-misconfigurations.json
+86b0af396369f91b2d889b9447a2c4cb7d2bdece291626bba52d9129122cab40  04-misconfigurations.txt
+16fdf7d536da0a2035a3cd6314dcfb0cc9a1963056d22f673e21445ed6db147a  05-sbom-cyclonedx.json
+e3833f1be425fb980ab7071aaa3ca109ef6c57979e0a70ef7f569b141da2ce26  evidence-hashes-after.txt
+e3833f1be425fb980ab7071aaa3ca109ef6c57979e0a70ef7f569b141da2ce26  evidence-hashes-before.txt

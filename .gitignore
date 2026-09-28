@@ -18,3 +18,9 @@ bin/
 # Keep evidence output - it IS the deliverable
 !output/
 !output/**
+
+# Convenience mirror of the newest run, rebuilt on every scan
+output/latest/
+
+# Python bytecode
+__pycache__/

@@ -4,7 +4,7 @@ Report Summary
 ┌─────────┬──────┬─────────────────┐
 │ Target  │ Type │ Vulnerabilities │
 ├─────────┼──────┼─────────────────┤
-│ pom.xml │ pom  │       86        │
+│ pom.xml │ pom  │       88        │
 └─────────┴──────┴─────────────────┘
 Legend:
 - '-': Not scanned
@@ -13,12 +13,59 @@ Legend:
 
 pom.xml (pom)
 =============
-Total: 86 (UNKNOWN: 0, LOW: 0, MEDIUM: 12, HIGH: 52, CRITICAL: 22)
+Total: 88 (UNKNOWN: 0, LOW: 1, MEDIUM: 11, HIGH: 42, CRITICAL: 34)
 
 ┌─────────────────────────────────────────────┬──────────────────┬──────────┬────────┬───────────────────┬──────────────────────────────────────┬──────────────────────────────────────────────────────────────┐
 │                   Library                   │  Vulnerability   │ Severity │ Status │ Installed Version │            Fixed Version             │                            Title                             │
 ├─────────────────────────────────────────────┼──────────────────┼──────────┼────────┼───────────────────┼──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ com.fasterxml.jackson.core:jackson-databind │ CVE-2019-14379   │ CRITICAL │ fixed  │ 2.9.8             │ 2.9.9.2, 2.8.11.4, 2.7.9.6           │ jackson-databind: default typing mishandling leading to      │
+│ com.fasterxml.jackson.core:jackson-databind │ CVE-2017-15095   │ CRITICAL │ fixed  │ 2.8.6             │ 2.8.11, 2.9.4, 2.6.7.3, 2.7.9.2      │ jackson-databind: Unsafe deserialization due to incomplete   │
+│                                             │                  │          │        │                   │                                      │ black list (incomplete fix for CVE-2017-7525)...             │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2017-15095                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2017-17485   │          │        │                   │ 2.9.4, 2.8.11, 2.7.9.2               │ jackson-databind: Unsafe deserialization due to incomplete   │
+│                                             │                  │          │        │                   │                                      │ black list (incomplete fix for CVE-2017-15095)...            │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2017-17485                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2017-7525    │          │        │                   │ 2.6.7.1, 2.7.9.1, 2.8.9              │ jackson-databind: Deserialization vulnerability via          │
+│                                             │                  │          │        │                   │                                      │ readValue method of ObjectMapper                             │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2017-7525                    │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-11307   │          │        │                   │ 2.7.9.4, 2.8.11.2, 2.9.6             │ jackson-databind: Potential information exfiltration with    │
+│                                             │                  │          │        │                   │                                      │ default typing, serialization gadget from MyBatis            │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-11307                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-14718   │          │        │                   │ 2.9.7, 2.8.11.3, 2.7.9.5, 2.6.7.3    │ jackson-databind: arbitrary code execution in slf4j-ext      │
+│                                             │                  │          │        │                   │                                      │ class                                                        │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-14718                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-14719   │          │        │                   │ 2.9.7, 2.8.11.3, 2.7.9.5             │ jackson-databind: arbitrary code execution in blaze-ds-opt   │
+│                                             │                  │          │        │                   │                                      │ and blaze-ds-core classes                                    │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-14719                   │
+│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-14720   │          │        │                   │                                      │ jackson-databind: exfiltration/XXE in some JDK classes       │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-14720                   │
+│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-14721   │          │        │                   │                                      │ jackson-databind: server-side request forgery (SSRF) in      │
+│                                             │                  │          │        │                   │                                      │ axis2-jaxws class                                            │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-14721                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-19360   │          │        │                   │ 2.9.8, 2.8.11.3, 2.7.9.5             │ jackson-databind: improper polymorphic deserialization in    │
+│                                             │                  │          │        │                   │                                      │ axis2-transport-jms class                                    │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-19360                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-19361   │          │        │                   │ 2.7.9.5, 2.9.8, 2.8.11.3             │ jackson-databind: improper polymorphic deserialization in    │
+│                                             │                  │          │        │                   │                                      │ openjpa class                                                │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-19361                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-19362   │          │        │                   │ 2.9.8, 2.8.11.3, 2.7.9.5, 2.6.7.3    │ jackson-databind: improper polymorphic deserialization in    │
+│                                             │                  │          │        │                   │                                      │ jboss-common-core class                                      │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-19362                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-7489    │          │        │                   │ 2.8.11.1, 2.9.5, 2.7.9.3, 2.6.7.5    │ jackson-databind: incomplete fix for CVE-2017-7525 permits   │
+│                                             │                  │          │        │                   │                                      │ unsafe serialization via c3p0 libraries                      │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-7489                    │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2019-14379   │          │        │                   │ 2.9.9.2, 2.8.11.4, 2.7.9.6           │ jackson-databind: default typing mishandling leading to      │
 │                                             │                  │          │        │                   │                                      │ remote code execution                                        │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2019-14379                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -52,17 +99,25 @@ Total: 86 (UNKNOWN: 0, LOW: 0, MEDIUM: 12, HIGH: 52, CRITICAL: 22)
 │                                             │ CVE-2020-8840    │          │        │                   │ 2.6.7.4, 2.7.9.7, 2.8.11.5, 2.9.10.3 │ jackson-databind: Lacks certain xbean-reflect/JNDI blocking  │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-8840                    │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-9546    │          │        │                   │ 2.9.10.4                             │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ shaded-hikari-config                                         │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-9546                    │
-│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                                             │ CVE-2020-9547    │          │        │                   │ 2.9.10.4, 2.8.11.6, 2.7.9.7          │ jackson-databind: Serialization gadgets in ibatis-sqlmap     │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-9547                    │
 │                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
 │                                             │ CVE-2020-9548    │          │        │                   │                                      │ jackson-databind: Serialization gadgets in anteros-core      │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-9548                    │
 │                                             ├──────────────────┼──────────┤        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2019-12086   │ HIGH     │        │                   │ 2.9.9, 2.8.11.4, 2.7.9.6, 2.6.7.3    │ jackson-databind: polymorphic typing issue allows attacker   │
+│                                             │ CVE-2018-12022   │ HIGH     │        │                   │ 2.7.9.4, 2.8.11.2, 2.9.6             │ jackson-databind: improper polymorphic deserialization of    │
+│                                             │                  │          │        │                   │                                      │ types from Jodd-db library                                   │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-12022                   │
+│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-12023   │          │        │                   │                                      │ jackson-databind: improper polymorphic deserialization of    │
+│                                             │                  │          │        │                   │                                      │ types from Oracle JDBC driver                                │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-12023                   │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2018-5968    │          │        │                   │ 2.8.11.1, 2.9.4, 2.7.9.5             │ jackson-databind: unsafe deserialization due to incomplete   │
+│                                             │                  │          │        │                   │                                      │ blacklist (incomplete fix for CVE-2017-7525 and...           │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2018-5968                    │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2019-12086   │          │        │                   │ 2.9.9, 2.8.11.4, 2.7.9.6, 2.6.7.3    │ jackson-databind: polymorphic typing issue allows attacker   │
 │                                             │                  │          │        │                   │                                      │ to read arbitrary local files on...                          │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2019-12086                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -74,64 +129,13 @@ Total: 86 (UNKNOWN: 0, LOW: 0, MEDIUM: 12, HIGH: 52, CRITICAL: 22)
 │                                             │                  │          │        │                   │                                      │ commons-configuration package                                │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2019-14892                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2019-14893   │          │        │                   │ 2.9.10                               │ jackson-databind: Serialization gadgets in classes of the    │
-│                                             │                  │          │        │                   │                                      │ xalan package                                                │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2019-14893                   │
-│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                                             │ CVE-2020-10650   │          │        │                   │ 2.9.10.4                             │ A deserialization flaw was discovered in jackson-databind    │
 │                                             │                  │          │        │                   │                                      │ through 2.9. ...                                             │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-10650                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-10672   │          │        │                   │                                      │ jackson-databind: mishandles the interaction between         │
-│                                             │                  │          │        │                   │                                      │ serialization gadgets and typing which could result...       │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-10672                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                                             │ CVE-2020-10673   │          │        │                   │ 2.9.10.4, 2.6.7.4                    │ jackson-databind: mishandles the interaction between         │
 │                                             │                  │          │        │                   │                                      │ serialization gadgets and typing which could result...       │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-10673                   │
-│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-10968   │          │        │                   │ 2.9.10.4                             │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ org.aoju.bus.proxy.provider.*.RmiProvider                    │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-10968                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-10969   │          │        │                   │                                      │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ javax.swing.JEditorPane                                      │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-10969                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-11111   │          │        │                   │                                      │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ org.apache.activemq.jms.pool.XaPooledConnectionFactory       │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-11111                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-11112   │          │        │                   │                                      │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ org.apache.commons.proxy.provider.remoting.RmiProvider       │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-11112                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-11113   │          │        │                   │                                      │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ org.apache.openjpa.ee.WASRegistryManagedRuntime              │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-11113                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-11619   │          │        │                   │                                      │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ org.springframework:spring-aop                               │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-11619                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-11620   │          │        │                   │                                      │ jackson-databind: Serialization gadgets in                   │
-│                                             │                  │          │        │                   │                                      │ commons-jelly:commons-jelly                                  │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-11620                   │
-│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-14060   │          │        │                   │ 2.9.10.5                             │ jackson-databind: serialization in                           │
-│                                             │                  │          │        │                   │                                      │ oadd.org.apache.xalan.lib.sql.JNDIConnectionPool             │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-14060                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-14061   │          │        │                   │                                      │ jackson-databind: serialization in weblogic/oracle-aqjms     │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-14061                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-14062   │          │        │                   │                                      │ jackson-databind: serialization in                           │
-│                                             │                  │          │        │                   │                                      │ com.sun.org.apache.xalan.internal.lib.sql.JNDIConnectionPool │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-14062                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2020-14195   │          │        │                   │                                      │ jackson-databind: serialization in                           │
-│                                             │                  │          │        │                   │                                      │ org.jsecurity.realm.jndi.JndiRealmFactory                    │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-14195                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │                                             │ CVE-2020-24616   │          │        │                   │ 2.9.10.6                             │ jackson-databind: mishandles the interaction between         │
 │                                             │                  │          │        │                   │                                      │ serialization gadgets and typing, related to                 │
@@ -267,7 +271,10 @@ Total: 86 (UNKNOWN: 0, LOW: 0, MEDIUM: 12, HIGH: 52, CRITICAL: 22)
 │                                             │                  │          │        │                   │                                      │ part headers                                                 │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2025-48976                   │
 ├─────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│ org.apache.logging.log4j:log4j-core         │ CVE-2021-44228   │ CRITICAL │        │ 2.14.1            │ 2.15.0, 2.3.1, 2.12.2                │ log4j-core: Remote code execution in Log4j 2.x when logs     │
+│ org.apache.logging.log4j:log4j-core         │ CVE-2017-5645    │ CRITICAL │        │ 2.7               │ 2.8.2                                │ log4j: Socket receiver deserialization vulnerability         │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2017-5645                    │
+│                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2021-44228   │          │        │                   │ 2.15.0, 2.3.1, 2.12.2                │ log4j-core: Remote code execution in Log4j 2.x when logs     │
 │                                             │                  │          │        │                   │                                      │ contain an attacker-controlled...                            │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2021-44228                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
@@ -286,14 +293,13 @@ Total: 86 (UNKNOWN: 0, LOW: 0, MEDIUM: 12, HIGH: 52, CRITICAL: 22)
 │                                             │                  │          │        │                   │                                      │ missing TLS hostname verification...                         │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2025-68161                   │
 │                                             ├──────────────────┤          │        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2026-34477   │          │        │                   │ 2.25.4                               │ org.apache.logging.log4j/log4j-core: Apache Log4j Core:      │
-│                                             │                  │          │        │                   │                                      │ Man-in-the-middle attack due to incomplete hostname          │
-│                                             │                  │          │        │                   │                                      │ verification                                                 │
-│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2026-34477                   │
-│                                             ├──────────────────┤          │        │                   │                                      ├──────────────────────────────────────────────────────────────┤
-│                                             │ CVE-2026-34480   │          │        │                   │                                      │ org.apache.logging.log4j/log4j-core: Apache Log4j Core:      │
+│                                             │ CVE-2026-34480   │          │        │                   │ 2.25.4                               │ org.apache.logging.log4j/log4j-core: Apache Log4j Core:      │
 │                                             │                  │          │        │                   │                                      │ Invalid XML output causes denial of service in...            │
 │                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2026-34480                   │
+│                                             ├──────────────────┼──────────┤        │                   ├──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                                             │ CVE-2020-9488    │ LOW      │        │                   │ 2.13.2, 2.12.3, 2.3.2                │ log4j: improper validation of certificate with host mismatch │
+│                                             │                  │          │        │                   │                                      │ in SMTP appender                                             │
+│                                             │                  │          │        │                   │                                      │ https://avd.aquasec.com/nvd/cve-2020-9488                    │
 ├─────────────────────────────────────────────┼──────────────────┼──────────┤        ├───────────────────┼──────────────────────────────────────┼──────────────────────────────────────────────────────────────┤
 │ org.apache.struts:struts2-core              │ CVE-2017-12611   │ CRITICAL │        │ 2.5.10            │ 2.3.34, 2.5.11                       │ struts: RCE attack when using an unintentional expression in │
 │                                             │                  │          │        │                   │                                      │ Freemarker tag instead...                                    │

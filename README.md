@@ -1,128 +1,100 @@
-# Forensic examination of the ACIS dispute portal
+# Forensic examination of the Equifax 2017 breach, using Trivy
 
-Case study of the 2017 Equifax breach, examined with Trivy.
-
-CSFCL (Cyber Security Forensics and Compliance Laws), IA2, case
-CSFCL-IA2-2026-005.
+**Case CSFCL-IA2-2026-005** · Cyber Security Forensics and Compliance Laws, IA2
 
 | | |
 |---|---|
 | Examiners | Yashasvi Gupta (16010123341), Shubhpreet Kaur (16010123328), Shweta Karandikar (16010123329) |
-| Primary tool | [Trivy](https://trivy.dev/) 0.74.0, Aqua Security |
-| Supporting | `sha256sum` / `shasum`, CycloneDX 1.7 |
-| Evidence | `evidence/acis-portal/`, 7 files |
+| Tool | [Trivy](https://trivy.dev/) 0.74.0 (Aqua Security) |
+| Repository | https://github.com/Yashvi2874/csfcl-ia2-equifax-trivy-forensics |
 
-## The question
-
-> What activities and digital evidence can be identified from the forensic
-> image, and what sequence of events can be established from the artifacts?
+## What this is
 
 In 2017 Equifax lost the personal data of about 147 million people. The way in
-was one unpatched server running Apache Struts, vulnerable to CVE-2017-5638. The
-patch had been available for 65 days.
+was one web server running Apache Struts with a known flaw, CVE-2017-5638. The
+fix had been public for 67 days when the attackers got in.
 
-This repository rebuilds that server as an evidence set and examines it, asking
-something the original investigators could not: was the breach detectable before
-it happened?
+This repository rebuilds the vulnerable server as a small evidence set and
+examines it with Trivy, asking one question: **could the attack have been seen
+before it happened?**
 
-It was. The scan takes under four seconds and reports the root cause as its
-highest-severity finding.
+It could. A scan of the evidence takes a few seconds and reports CVE-2017-5638
+as its top finding.
 
 ## Why Trivy
 
-The IA2 brief asks for tools not covered in the lab. Our lab sessions used FTK
-Imager, Autopsy, Volatility, Wireshark and NetworkMiner, so all of those are
-out. Trivy was assigned to our group and was not used in any lab session.
+The breach came down to one vulnerable software component that nobody had
+patched. Trivy reads a system's files without running them, works out which
+software and versions are present, and matches them against public
+vulnerability databases. The same tool finds passwords left in files, checks
+configuration for unsafe settings, and writes a list of every component it
+found. That lets us rebuild a version of the Equifax server and show each
+failure happening on real software, found by a real tool. Trivy only reads
+files, so the evidence is never run or changed.
 
-It also fits the case. Each Equifax failure maps to a Trivy scanner:
+## Repository layout
 
-| Equifax failure | Scanner used |
-|---|---|
-| Unpatched Struts (CVE-2017-5638) | `trivy rootfs --scanners vuln` |
-| No accurate asset inventory | `trivy rootfs --format cyclonedx` |
-| Database passwords in plaintext | `trivy fs --scanners secret` with custom rules |
-| Weak server hardening | `trivy fs --scanners misconfig` |
+```
+evidence/acis-portal/      the seized filesystem (a rebuilt Equifax server)
+  lib/struts2-core-2.5.10.jar   the real, vulnerable Apache Struts library
+  config/                       plaintext credentials, keys, environment file
+  pom.xml                       declared libraries
+  Dockerfile                    how the server is built
+scripts/
+  install-trivy.sh          installs Trivy into ~/bin, no admin rights
+  run-investigation.sh      the whole examination in one command
+  show-cve.py               prints the vulnerability findings as a table
+  summarise.py              prints the closing summary
+  trivy-secret-rules.yaml   custom rules for the ACIS credentials
+output/                     the results of one examination run, committed as evidence
+screenshots/                screenshots of the demonstration
+report/
+  CSFCL-IA2-2026-005-Forensic-Report.docx    the forensic report
+  CSFCL-IA2-2026-005-Presentation.pptx        the presentation
+```
 
-## Running it
+## How to reproduce the examination
 
 Works on Windows (Git Bash), macOS and Linux.
 
 ```bash
-git clone git@github.com:Yashvi2874/csfcl-ia2-equifax-trivy-forensics.git
+git clone https://github.com/Yashvi2874/csfcl-ia2-equifax-trivy-forensics.git
 cd csfcl-ia2-equifax-trivy-forensics
 
-bash scripts/install-trivy.sh      # installs to ~/bin, no admin rights
-bash scripts/run-investigation.sh  # runs every scanner, hashes everything
+bash scripts/install-trivy.sh      # installs Trivy into ~/bin
+bash scripts/run-investigation.sh  # runs every scan and hashes everything
 ```
 
-Output goes to a timestamped directory under `output/`. The first run downloads
-Trivy's vulnerability database, around 1 GB, so give it a few minutes.
+The script writes a new timestamped folder under `output/`, and also copies it
+to `output/latest/`. The `output/` folder already holds one committed run so the
+results can be read without running anything. Add `--offline` to the run command
+on a machine with no internet, once Trivy's database has been downloaded once.
 
-Nothing vulnerable is ever executed. Trivy reads files the way you read a zip
-archive without running the programs inside it. There is no live service, no
-exploit code and no network listener at any point.
+Nothing vulnerable is ever executed. Trivy reads the files the way you can list
+what is inside a zip archive without running the programs in it.
 
-## What's here
+## Headline findings
 
-```
-evidence/acis-portal/      the seized filesystem
-  lib/                     struts2-core-2.5.10.jar, the vulnerable component
-  config/                  plaintext credentials, keys, environment files
-  pom.xml                  declared dependencies
-  Dockerfile               build definition
-scripts/
-  install-trivy.sh         cross-platform installer
-  run-investigation.sh     the whole examination in one command
-  summarise.py             parses Trivy JSON into a findings summary
-  trivy-secret-rules.yaml  custom rules for the ACIS credentials
-report/
-  forensic-report.md       the main report, all 13 activities
-  evidence-log.md          every artifact with its hash
-  chain-of-custody.md      who handled what, when
-docs/
-  01-case-background.md    what happened at Equifax and why
-  02-methodology.md        how the examination was done
-  03-indian-compliance.md  IT Act, SPDI, CERT-In, DPDP, CICRA analysis
-  video-script.md          10 minute script, three speaking parts
-  run-and-screenshot-guide.md   step by step for the demo
-output/                    scan results, committed as evidence
-screenshots/               screenshots supporting the report
-```
+- **CVE-2017-5638**, critical, CVSS 3.1 score 9.8, in `struts2-core 2.5.10`,
+  fixed in 2.3.32 and 2.5.10.1. This is the flaw that breached Equifax.
+- Of 21 flaws Trivy lists in the library today, only 2 were public before the
+  intrusion on 13 May 2017, and only one of those was critical: CVE-2017-5638.
+- 11 secrets across 4 files, including four plaintext database passwords.
+- 5 failed configuration checks, including the server running as root.
+- Evidence integrity: every file's SHA-256 hash was identical before and after
+  the examination, so nothing was altered.
 
-Start with [`report/forensic-report.md`](report/forensic-report.md).
-
-## Findings
-
-| Category | Count |
-|---|---|
-| Vulnerabilities in compiled artifacts | 21, of which 7 critical |
-| Vulnerabilities in declared dependencies | 86, of which 22 critical |
-| Exposed secrets | 10, of which 8 critical |
-| Misconfigurations | 5, of which 2 critical |
-
-Primary finding:
-
-```
-CVE-2017-5638   CRITICAL   CVSS v3 9.8
-org.apache.struts:struts2-core 2.5.10  ->  fixed in 2.3.32, 2.5.10.1
-struts2: RCE when performing file upload based on Jakarta Multipart parser
-```
-
-Evidence integrity was verified before and after the examination. All seven
-SHA-256 hashes were identical, so the examination did not alter the evidence.
-
-Counts shift over time as new CVEs are published against the same component
-versions. Record the scan date with any figure you quote.
-
-## About the data
+## The data is synthetic
 
 Every credential, key and hostname under `evidence/` is invented for coursework.
-See [`evidence/SYNTHETIC-DATA-NOTICE.md`](evidence/SYNTHETIC-DATA-NOTICE.md). No
-real Equifax system, customer record or credential appears anywhere here.
+Only the Struts library is a real file. See
+[`evidence/SYNTHETIC-DATA-NOTICE.md`](evidence/SYNTHETIC-DATA-NOTICE.md). No real
+Equifax system, customer record or credential appears anywhere here.
 
 ## Sources
 
-- US Government Accountability Office, GAO-18-559
-- US House Committee on Oversight and Government Reform, December 2018
-- NVD entry for CVE-2017-5638, Apache Struts advisory S2-045
-- [Trivy documentation](https://trivy.dev/docs/)
+- US Government Accountability Office, *Actions Taken by Equifax and Federal
+  Agencies in Response to the 2017 Breach*, GAO-18-559 (2018).
+- US House Committee on Oversight and Government Reform, *The Equifax Data
+  Breach* (December 2018).
+- NVD entry for CVE-2017-5638; Apache Struts security bulletin S2-045.

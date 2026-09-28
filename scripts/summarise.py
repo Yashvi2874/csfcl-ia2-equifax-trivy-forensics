@@ -84,11 +84,11 @@ def main():
     else:
         print("  NOTE: CVE-2017-5638 was not present in these results.")
 
-    # The plaintext credentials that turned one foothold into 48 databases.
+    # Plaintext credentials: the data governance factor in GAO-18-559.
     acis = [s for s in secrets if str(s.get("RuleID", "")).startswith("acis-")]
     if acis:
         print()
-        print("  Plaintext credential exposure (Equifax failure #3):")
+        print("  Plaintext credentials (data governance):")
         for s in acis:
             print("    %-9s %s:%s  %s"
                   % (s.get("Severity"), os.path.basename(s.get("_Target", "?")),

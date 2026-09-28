@@ -3,9 +3,16 @@
 # Examines the seized ACIS filesystem with Trivy and hashes everything it
 # touches. Case CSFCL-IA2-2026-005, Equifax 2017.
 #
-# Usage: bash scripts/run-investigation.sh
+# Usage: bash scripts/run-investigation.sh [--offline]
+#
+# --offline stops Trivy trying to refresh its databases, for a room with no
+# internet. It needs the databases to have been downloaded once already.
 #
 set -euo pipefail
+
+if [ "${1:-}" = "--offline" ]; then
+  export TRIVY_SKIP_DB_UPDATE=true TRIVY_SKIP_JAVA_DB_UPDATE=true TRIVY_SKIP_CHECK_UPDATE=true
+fi
 
 CASE_ID="CSFCL-IA2-2026-005"
 CASE_TITLE="Forensic examination of the ACIS dispute portal (Equifax 2017)"
@@ -80,17 +87,12 @@ printf '    Output    : %s\n' "$OUT_DIR"
 # Activity 2. Baseline hashes first, so we can prove afterwards that the
 # examination didn't change anything.
 log "Activity 2, recording evidence hashes"
+# Plain sha256sum format with no header, so "diff before after" and
+# "sha256sum -c" both work on these files directly.
 BASELINE="$OUT_DIR/evidence-hashes-before.txt"
-{
-  printf '# Evidence integrity baseline\n'
-  printf '# Case: %s\n' "$CASE_ID"
-  printf '# Generated (UTC): %s\n' "$STAMP"
-  printf '# Algorithm: SHA-256\n'
-  printf '\n'
-  find "$EVIDENCE_DIR" -type f | sort | while read -r f; do
-    printf '%s  %s\n' "$(sha256 "$f")" "${f#$REPO_ROOT/}"
-  done
-} > "$BASELINE"
+find "$EVIDENCE_DIR" -type f | sort | while read -r f; do
+  printf '%s  %s\n' "$(sha256 "$f")" "${f#$REPO_ROOT/}"
+done > "$BASELINE"
 printf '    %s files hashed\n' "$(grep -c '^[0-9a-f]' "$BASELINE" || echo 0)"
 
 # Activity 4. rootfs, not fs. trivy fs only reads dependency manifests and
@@ -132,16 +134,11 @@ log "Activity 1, software bill of materials"
 
 log "Activity 2, verifying evidence integrity"
 AFTER="$OUT_DIR/evidence-hashes-after.txt"
-{
-  printf '# Evidence integrity verification (post-examination)\n'
-  printf '# Case: %s\n' "$CASE_ID"
-  printf '\n'
-  find "$EVIDENCE_DIR" -type f | sort | while read -r f; do
-    printf '%s  %s\n' "$(sha256 "$f")" "${f#$REPO_ROOT/}"
-  done
-} > "$AFTER"
+find "$EVIDENCE_DIR" -type f | sort | while read -r f; do
+  printf '%s  %s\n' "$(sha256 "$f")" "${f#$REPO_ROOT/}"
+done > "$AFTER"
 
-if diff <(grep '^[0-9a-f]' "$BASELINE") <(grep '^[0-9a-f]' "$AFTER") >/dev/null 2>&1; then
+if diff "$BASELINE" "$AFTER" >/dev/null 2>&1; then
   INTEGRITY="PASS - all evidence hashes identical before and after examination"
 else
   INTEGRITY="FAIL - evidence changed during examination"
@@ -178,5 +175,11 @@ else
   printf '    No Python found, raw JSON is in %s\n' "$OUT_DIR"
 fi
 
-printf '\n    Written to output/%s\n' "$STAMP"
+# Every run keeps its own timestamped folder, but a second run would make
+# commands like "cat output/*/..." match two folders and break. output/latest
+# always mirrors the newest run, so the demo commands have one fixed path.
+rm -rf "$REPO_ROOT/output/latest"
+cp -r "$OUT_DIR" "$REPO_ROOT/output/latest"
+
+printf '\n    Written to output/%s (also copied to output/latest)\n' "$STAMP"
 printf '    Next: screenshot the .txt reports for the report.\n\n'
