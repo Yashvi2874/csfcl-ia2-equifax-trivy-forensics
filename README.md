@@ -47,6 +47,7 @@ scripts/
   summarise.py              prints the closing summary
   trivy-secret-rules.yaml   custom rules for the ACIS credentials
 output/                     the results of one examination run, committed as evidence
+screenshots/                terminal screenshots of the examination
 report/
   CSFCL-IA2-2026-005-Forensic-Report.docx    the forensic report
   CSFCL-IA2-2026-005-Presentation.pptx        the presentation
