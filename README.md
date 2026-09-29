@@ -51,6 +51,7 @@ screenshots/                terminal screenshots of the examination
 report/
   CSFCL-IA2-2026-005-Forensic-Report.docx    the forensic report
   CSFCL-IA2-2026-005-Forensic-Report.pdf     the forensic report as a PDF
+  PPT.pdf                                    the presentation slides
 ```
 
 ## How to reproduce the examination
