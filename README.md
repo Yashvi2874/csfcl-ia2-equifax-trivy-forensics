@@ -50,7 +50,7 @@ output/                     the results of one examination run, committed as evi
 screenshots/                terminal screenshots of the examination
 report/
   CSFCL-IA2-2026-005-Forensic-Report.docx    the forensic report
-  CSFCL-IA2-2026-005-Presentation.pptx        the presentation
+  CSFCL-IA2-2026-005-Forensic-Report.pdf     the forensic report as a PDF
 ```
 
 ## How to reproduce the examination
